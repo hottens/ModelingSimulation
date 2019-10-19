@@ -170,8 +170,8 @@ class Organism(Object):
             direction = d/norm
 		# Default is a step in a modified direction
         else:
-            # x2=cosβx1−sinβy1,
-			# y2=sinβx1+cosβy1
+            # x2=cos(r*x1)-sin(r*y1),
+			# y2=sin(r*x1)+cos(r*y1)
 
 			# Pick a random angle within a range
 			# and adapt the Organisms direction
