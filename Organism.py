@@ -80,10 +80,11 @@ class Organism(Object):
     def reproduce(self, energy):
         offspring = copy.deepcopy(self)
         mutation_chance = 0.1
+        mutation = 0.1 # random.uniform(0.1, 0.5)
 
-        offspring.size  += (mutation_chance>random.random())*random.uniform(0.1, 0.5)*random.choice([-1,1])
-        offspring.speed += (mutation_chance>random.random())*random.uniform(0.1, 0.5)*random.choice([-1,1])
-        offspring.sense += (mutation_chance>random.random())*random.uniform(0.1, 0.5)*random.choice([-1,1])
+        offspring.size  += (mutation_chance>random.random())*random.choice([-1,1])*mutation
+        offspring.speed += (mutation_chance>random.random())*random.choice([-1,1])*mutation
+        offspring.sense += (mutation_chance>random.random())*random.choice([-1,1])*mutation
 
         offspring.energy = energy
         offspring.state = State.FIND_FOOD

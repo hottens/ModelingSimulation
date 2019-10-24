@@ -8,7 +8,7 @@ def thread_function(name, population, display = False):
 
 # 10 x perform experiment with same population
 population = [
-    (50, (1, 1, 1))
+    (50, (1, 1, 3))
 ]
 name = "same_pop50_"
 for i in range(0,10):
@@ -16,7 +16,7 @@ for i in range(0,10):
     x.start()
 
 population = [
-    (1, (1, 1, 1))
+    (1, (1, 1, 3))
 ]
 name = "same_pop1_"
 for i in range(0,10):
@@ -25,15 +25,15 @@ for i in range(0,10):
 
 # do a simulation with different populations
 populations = [
-    [(1, (3, 1, 1))],
-    [(1, (1, 3, 1))],
-    [(1, (1, 1, 5))],
-    [(50, (3, 1, 1))],
-    [(50, (1, 3, 1))],
-    [(50, (1, 1, 5))],
-    [(10, (3, 3, 1)), (40, (1, 1, 5))],
-    [(40, (3, 3, 1)), (10, (1, 1, 5))],
-    [(25, (3, 3, 1)), (25, (1, 1, 5))],
+    [(1, (3, 1, 3))],
+    [(1, (1, 3, 3))],
+    [(1, (1, 1, 6))],
+    [(50, (3, 1, 3))],
+    [(50, (1, 3, 3))],
+    [(50, (1, 1, 6))],
+    [(10, (3, 3, 3)), (40, (1, 1, 6))],
+    [(40, (3, 3, 3)), (10, (1, 1, 6))],
+    [(25, (3, 3, 3)), (25, (1, 1, 6))],
 ]
 names = ["1_size", "1_speed", "1_sense", "50_size", "50_speed", "50_sense", "10-large_40-vision", "40-large_10-vision", "25-large_25-vision"]
 
